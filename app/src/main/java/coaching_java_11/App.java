@@ -3,12 +3,25 @@
  */
 package coaching_java_11;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import coaching_java_11.models.Animal;
+import coaching_java_11.models.Cat;
+import coaching_java_11.models.Dog;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+public class App {
+ public static void main(String[] args) {
+     Animal humano = new Animal() {
+         @Override
+         public String talk() {
+             String hablar = "Hola";
+             return hablar;
+         }
+     };
+
+     Animal gato = new Cat();
+     Animal perro = new Dog();
+
+     //System.out.println(humano.talk());
+     System.out.println(gato.talk());
+     //System.out.println(perro.talk());
     }
 }
